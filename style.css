@@ -1,0 +1,96 @@
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #FFF7E9;
+      color: #333;
+    }
+
+    header {
+      background-color: #E8C872;
+      color: #222;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    #total-saldo {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    form {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+    }
+
+    .pengeluaran-item {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pengeluaran-item input {
+      flex: 1;
+    }
+
+    input, select, textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .tambah-btn {
+      background-color: #E8C872;
+      border: none;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      cursor: pointer;
+      width: fit-content;
+    }
+
+    button[type="submit"] {
+      background-color: #E8C872;
+      border: none;
+      padding: 0.75rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #222;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #d7b65e;
+    }
+
+    @media (min-width: 600px) {
+      main {
+        max-width: 500px;
+        margin: 2rem auto;
+      }
+    }

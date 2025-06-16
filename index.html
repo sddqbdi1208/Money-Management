@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money Management</title>
+  <link rel="stylesheet" href="style.css" />
+ 
+</head>
+<body>
+  <header>
+    <h1>MONEY MANAGEMENT</h1>
+    <div id="total-saldo">Rp 0</div>
+  </header>
+
+  <main>
+    <form id="finance-form">
+      <label>Tanggal:
+        <input type="date" name="tanggal" required />
+      </label>
+
+      <label>Pemasukan:
+        <input type="number" name="pemasukan" placeholder="Nominal pemasukan" min="0" />
+      </label>
+
+      <label>Pengeluaran:</label>
+      <div id="pengeluaran-list">
+        <div class="pengeluaran-item">
+          <input type="text" name="barang[]" placeholder="Nama barang" required />
+          <input type="number" name="nominal[]" placeholder="Nominal" min="0" required />
+        </div>
+      </div>
+      <button type="button" class="tambah-btn" onclick="tambahPengeluaran()">+ Tambah Pengeluaran</button>
+
+      <button type="submit">Simpan</button>
+    </form>
+  </main>
+
+  <script>
+    function tambahPengeluaran() {
+      const container = document.getElementById('pengeluaran-list');
+      const div = document.createElement('div');
+      div.classList.add('pengeluaran-item');
+      div.innerHTML = `
+        <input type="text" name="barang[]" placeholder="Nama barang" required />
+        <input type="number" name="nominal[]" placeholder="Nominal" min="0" required />
+      `;
+      container.appendChild(div);
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
